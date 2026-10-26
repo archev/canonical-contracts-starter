@@ -1,0 +1,37 @@
+concepts:
+  - id: common.trace_id
+    name: Trace ID
+    version: 1
+    protobuf_type: TYPE_STRING
+    definition: >-
+      Identifier used to correlate an event with the distributed operation
+      or request that produced it.
+    owner: platform
+    status: active
+
+  - id: common.event_timestamp
+    name: Event timestamp
+    version: 1
+    protobuf_type: TYPE_MESSAGE
+    protobuf_message_type: google.protobuf.Timestamp
+    definition: >-
+      UTC instant at which the event occurred, not the time at which it was
+      published or processed.
+    owner: platform
+    status: active
+
+  - id: common.account_id
+    name: Account ID
+    version: 1
+    protobuf_type: TYPE_STRING
+    definition: Canonical identifier of the business account.
+    owner: data-governance
+    status: active
+
+  - id: common.customer_id
+    name: Customer ID
+    version: 1
+    protobuf_type: TYPE_STRING
+    definition: Canonical identifier of the customer.
+    owner: data-governance
+    status: active

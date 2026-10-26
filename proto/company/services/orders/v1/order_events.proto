@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package company.orders.v1;
+
+import "company/common/v1/event_metadata.proto";
+import "company/common/v1/business_context.proto";
+
+message OrderCreated {
+  company.common.v1.EventMetadata metadata = 1;
+  company.common.v1.BusinessContext business_context = 2;
+
+  string order_id = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package company.common.v1;
+
+import "google/protobuf/timestamp.proto";
+import "company/common/v1/annotations.proto";
+
+// Technical metadata shared by published events.
+message EventMetadata {
+  string trace_id = 1 [
+    (company.common.v1.canonical_id) = "common.trace_id"
+  ];
+
+  // Time when the business event occurred, not publish or processing time.
+  google.protobuf.Timestamp timestamp = 2 [
+    (company.common.v1.canonical_id) = "common.event_timestamp"
+  ];
+}

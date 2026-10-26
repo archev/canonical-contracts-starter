@@ -1,0 +1,11 @@
+# Illustrative policy; the starter validator does not enforce this file yet.
+event_policies:
+  - event_pattern: "company.payments.v1.*"
+    required_shared_payloads:
+      - company.common.v1.EventMetadata
+      - company.common.v1.BusinessContext
+
+  - event_pattern: "company.orders.v1.*"
+    required_shared_payloads:
+      - company.common.v1.EventMetadata
+      - company.common.v1.BusinessContext

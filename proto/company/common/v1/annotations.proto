@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package company.common.v1;
+
+import "google/protobuf/descriptor.proto";
+
+// Associates a Protobuf field with a concept in the canonical dictionary.
+extend google.protobuf.FieldOptions {
+  string canonical_id = 50001;
+}

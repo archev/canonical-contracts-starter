@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package company.common.v1;
+
+import "company/common/v1/annotations.proto";
+
+// Common business identifiers. Populate only fields applicable to the event.
+message BusinessContext {
+  string account_id = 1 [
+    (company.common.v1.canonical_id) = "common.account_id"
+  ];
+
+  string customer_id = 2 [
+    (company.common.v1.canonical_id) = "common.customer_id"
+  ];
+}
